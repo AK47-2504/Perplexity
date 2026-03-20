@@ -1,0 +1,24 @@
+import jwt from "jsonwebtoken";
+
+export function authUser(req, res, next) {
+  const token = req.cookies.token;
+  if (!token) {
+    return res.status(400).json({
+      message: "Unauthorized Access",
+      success: false,
+      err: "Token Not Provided",
+    });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (error) {
+    res.status(400).json({
+      message: "Unauthorized Access",
+      success: false,
+      err: "invalid Token",
+    });
+  }
+}
