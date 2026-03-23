@@ -74,11 +74,37 @@ This guide provides step-by-step instructions for setting up and using Nodemaile
 
 **Install Nodemailer:**
 
-   ```bash
-   npm install nodemailer
-   ```
+```bash
+npm install nodemailer
+```
 
 **Notes**
- 
+
 - Simple Mail Transfer Protocol (SMTP) is the standard internet protocol used for sending and relaying outgoing emails between servers
 - Transporter help to communicate between Web Server and SMTP Server
+
+- Generative AI - to generate content (Any Specific thing Img, video, text, code, audio etc) - jho purane data pe train hua hota hai uss datase vo content generate karke deta hai.
+- AI Service Provider (ASP) - Google, OpenAI, Microsoft, Anthropic, MistralAI etc
+  1.  Training an LLM
+  2.  Hosting an LLM
+  3.  Providing API to access an LLM
+- LLM - Global Data Provide > Trained on global data > Auto Prediction by identifying patterns > Predicting according to patterns from client side >
+- Langchain is used to communicate between server and AI service provider ex - to communicate between server and DB mongoose pacakage is used similar is the langchain
+- ASPs does not keep a store of what client is prompting we need to create an array on server side
+- So current ASP has no power to perform Actions - kuch alag actions karne ke liye ex - email send karna through prompt etc , so we use multiple tools to perform it 
+- Langchain ke pass hi tools hai which extend agent can do fetching real-time data, execute code, quert external database, and takes action in the world - under the hood tools are functions
+- Agents ka ek hi kaam ki jho tools create kiye hai usko LLM ke saath use kar sake isiliye Agents banate hai - Dono ko ek saath kaam karne ke liye Agents banate hai
+
+
+**Morgan**
+- Morgan is an HTTP request logger middleware for Express.js
+- Sever pe jho bhi request ati hai uska log rakta hai morgan
+👉 Simple meaning:
+1) It logs every incoming request to your server
+2) Helps you see what’s happening in your backend
+
+
+
+
+#Task1 - Resend Email if Email is not Send 
+#Task2 - is Verified is true the user should see different page
