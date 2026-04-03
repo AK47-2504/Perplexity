@@ -6,11 +6,11 @@ import { useChat } from "../hooks/useChat";
 const Dashboard = () => {
   const chat = useChat();
 
-  // jho bhi user rhega dashboard pe usko log kar dena
+  // Accessing the user state from the Redux store using useSelector
   const { user } = useSelector((state) => state.auth);
   console.log(user);
 
-  // Calling Initialize function to connect client and Server
+  // Calling Initialize function to connect client and Server if user is present
   useEffect(() => {
     chat.initializeSocketConn();
   }, []);
