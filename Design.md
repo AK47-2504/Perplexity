@@ -1,3 +1,4 @@
+// Hero Page
 ```FINAL BOTTOM CTA DESIGN 1
 <section className="py-40 px-6 relative overflow-hidden">
        {/* Background Decor: Animated Beam */}
@@ -93,4 +94,29 @@
           </div>
         </section>
 
+```
+
+
+// Dashboard Page
+```INPUT FIELD DESIGN 2
+       <div className="p-4 md:p-8 shrink-0">
+          <div className="max-w-3xl mx-auto relative group">
+            <div className="absolute inset-0 bg-indigo-600/10 blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity" />
+            <div className="relative bg-[#080808] border border-white/10 rounded-2xl md:rounded-3xl p-2 flex items-end backdrop-blur-xl transition-all">
+              <textarea
+                rows="1"
+                placeholder="Message Cognify..."
+                className="w-full bg-transparent border-none outline-none px-4 md:px-6 py-3 md:py-4 text-sm font-medium placeholder:text-white/20 resize-none max-h-40"
+              />
+              <div className="flex items-center gap-1 md:gap-2 p-1 md:p-2">
+                <button className="p-2 text-white/20 hover:text-white hidden sm:block">
+                  <Sparkles size={18} />
+                </button>
+                <button className="p-3 bg-white text-black rounded-xl md:rounded-2xl hover:bg-indigo-500 hover:text-white transition-all">
+                  <SendHorizontal size={18} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 ```
